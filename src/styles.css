@@ -13,11 +13,12 @@ body
     scroll-behavior: smooth;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1100px) {
     body {
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         padding-top: 2.8%;
         padding-bottom: 2.8%;
         background-color: #161a27;
+        width: 90%;
     }
   }

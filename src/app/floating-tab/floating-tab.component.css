@@ -1,0 +1,176 @@
+.floating-tab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Oscurecer ligeramente para un mejor contraste */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.floating-tab-content {
+  text-align: center;
+  background-color: #1e293b; /* Color más suave y oscuro */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+  width: 90%;
+  max-width: 600px;
+  color: #f0a500; /* Color dorado más suave para el texto */
+  border: 1px solid #2e3b47; /* Un borde oscuro para un toque sutil */
+  padding: 20px;
+  margin: 20px auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.floating-tab-content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumentar la sombra al pasar el cursor */
+}
+
+.floating-tab-content h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #f8f9fa; /* Blanco sutil para contraste */
+}
+
+.floating-tab-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #aab6d4; /* Color más suave y moderno para el texto */
+}
+
+.imagen1{
+  width: 80%;
+  border-color: #f0a500; /* Color dorado para bordes */
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+p{
+  color: #b0c5d8; /* Color gris suave para párrafos */
+}
+
+.title{
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: #3caddd; /* Color azul claro */
+  font-size: 20px;
+  transition: font 0.15s ease;
+}
+
+a:hover {
+  font-size: 21px;
+}
+
+a:after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+.content{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.content .front, .content .back {
+  background-color: #2a3b45; /* Gris oscuro suave */
+  border-radius: 8px;
+  padding: 15px;
+  width: 48%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra más ligera */
+  text-align: center;
+}
+
+.content .front h5, .content .back h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #f0a500; /* Color dorado suave */
+}
+
+.content .front p, .content .back p {
+  font-size: 0.9rem;
+  color: #c1d4e0; /* Gris suave */
+}
+
+.content a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.content a:hover {
+  color: #00aaff; /* Azul claro para el hover */
+}
+
+h5 {
+  color: #f0a500; /* Color dorado suave para los títulos */
+  font-size: 20px;
+}
+
+/* Media Queries para ajuste en móviles */
+@media (max-width: 768px) {
+  .floating-tab-content {
+    width: 70%; /* Ajustar a un ancho más pequeño en pantallas pequeñas */
+    padding: 15px; /* Reducir el padding */
+  }
+
+  .floating-tab-content h3 {
+    font-size: 1.2rem; /* Reducir tamaño de fuente */
+  }
+
+  .floating-tab-content p {
+    font-size: 1rem; /* Reducir tamaño de párrafo */
+  }
+
+  .content {
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    align-items: center;
+  }
+
+  .content .front, 
+  .content .back {
+    width: 100%; /* Hacer los bloques de contenido ocupar todo el ancho */
+    margin-bottom: 10px; /* Añadir espacio entre los bloques */
+  }
+
+  .content a {
+    font-size: 1rem; /* Ajustar tamaño de enlace */
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-tab-content {
+    width: 70%; /* Asegurar que el contenido esté bien ajustado */
+  }
+
+  .content .front,.content .back {
+    padding: 10px; /* Reducir el padding de las cajas */
+  }
+
+  h5 {
+    font-size: 18px; /* Reducir el tamaño de los títulos */
+  }
+
+  .content a {
+    font-size: 0.9rem; /* Ajustar tamaño de enlace */
+  }
+}

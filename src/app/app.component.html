@@ -1,6 +1,6 @@
 <app-cursor-light></app-cursor-light>
-<div class="contenedor">
-  <div class="elementos">
+<div class="container">
+  <div class="elements">
     <div class="cont1">
       <app-hover-effect></app-hover-effect>
       <h2>Desarrollador Full-Stack</h2>
@@ -10,12 +10,12 @@
       </h4>
       <div class="sub">
         <ul>
-          <li id="about"><a class="Subtitulo" href="#sub1">Sobre mí</a></li>
-          <li id="proyects"><a class="Subtitulo" href="#sub2">Proyectos</a></li>
+          <li><a class="Subtitulo" href="#about">Sobre mí</a></li>
+          <li><a class="Subtitulo" href="#proyects">Proyectos</a></li>
         </ul>
       </div>
     </div>
-    <div class="contenedor2">
+    <div class="social">
       <a class="icono" href="https://www.instagram.com/calinn_507/" target="_blank"><i class="bi bi-instagram"></i></a>
       <a class="icono" href="https://www.linkedin.com/in/carlos-alberto-l%C3%B3pez-p%C3%A9rez-060ba1279/"
         target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -23,8 +23,8 @@
       <a class="icono" href="https://github.com/CalinnHC" target="_blank"><i class="bi bi-github"></i></a>
     </div>
   </div>
-  <div class="elementos">
-    <h2 class="sub1" id="sub1"> Sobre mí</h2>
+  <div class="elements">
+    <h2 class="about" id="about"> Sobre mí</h2>
     <h4>
       <p>Soy estudiante de cuarto año de la Licenciatura en Ingeniería Informática en la Universidad de Panamá.
         Mi interés por la programación comenzó hace más de cinco años, lo que me llevó a estudiar de manera
@@ -37,7 +37,7 @@
         desafían a mejorar mis habilidades y conocimientos.</p>
     </h4>
 
-    <h2 class="sub2" id="sub2">Proyectos</h2>
+    <h2 class="proyects" id="proyects">Proyectos</h2>
       <div class="tarjeta">
         <div class="cuerpo">
           <div class="imagenDiv">
@@ -47,9 +47,7 @@
             <h5>ATM</h5>
             <h4>Proyecto de Programación de la Universidad de Panamá</h4>
             <div class="pie">
-              <a href="https://github.com/CalinnHC/Bank/commit/b2e88bd099c77982c4ebabe8bf406d7582b35e43"
-                target="_blank">Ver
-                en GitHub</a>
+              <a href="" target="_blank" (click)="showTab(1,$event)">Ver Proyecto</a>
             </div>
           </div>
         </div>
@@ -64,7 +62,7 @@
             <h5>Naviera Web</h5>
             <h4>Se conecta a una base de datos Oracle, a través de la página se pueden registrar nuevos usuarios.</h4>
             <div class="pie">
-              <a href="https://github.com/CalinnHC/Naviera-Web" target="_blank">Ver en GitHub</a>
+              <a href="" target="_blank" (click)="showTab(2,$event)">Ver Proyecto</a>
             </div>
           </div>
         </div>
@@ -79,8 +77,7 @@
             <h5>UPPE</h5>
             <h4>Sistema para Gestión de Proyectos de Extensión de la Universidad de Panamá</h4>
             <div class="pie">
-              <a href="https://github.com/CalinnHC/Front-ClienteSistema"
-                target="_blank">Ver en GitHub</a>
+              <a href="" target="_blank" (click)="showTab(3,$event)">Ver Proyecto</a>
             </div>
           </div>
         </div>
@@ -95,10 +92,11 @@
             <h5>Portfolio</h5>
             <h4>Portfolio de Programador, hecho con Angular</h4>
             <div class="pie">
-              <a href="https://github.com/CalinnHC/Front-ClienteSistema" target="_blank">Ver en GitHub</a>
+              <a href="https://github.com/CalinnHC/Front-ClienteSistema" (click)="showTab(4,$event)" target="_blank">Ver Proyecto</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <app-floating-tab></app-floating-tab>
